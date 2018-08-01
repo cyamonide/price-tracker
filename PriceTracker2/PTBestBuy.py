@@ -6,7 +6,6 @@ def getPrice(url, driver):
 	
 	driver.get(url)
 
-	assert "JBL" in driver.title
 	elem = driver.find_element_by_class_name("amount")
 	rawPrice = get_text_excluding_children(driver, elem)
 
